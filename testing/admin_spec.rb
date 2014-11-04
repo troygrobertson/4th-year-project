@@ -1,8 +1,8 @@
 require 'spec_helper'
 
 describe Administrator do
-	before { @administrator = Administrator.new(index:1, controlsManyPools = "pools", administrator.new(name: "Example administrator", email: "administrator@example.com", 
-				 password: "foobar", password_confirmation: "foobara",hasInstitution: "hospital1", isFirstLogin:false)}
+	before { @administrator = Administrator.new(name: "Example administrator", email: "administrator@example.com", 
+				 password: "foobar", password_confirmation: "foobara", isFirstLogin:false)}
 	subject{ administrator}
 #test variables specific to administrator
 	it { should respond_to(:index)}

@@ -2,13 +2,12 @@ require 'spec_helper'
 
 describe User do
 	before { @user = User.new(name: "Example User", email: "user@example.com", 
-				 password: "foobar", password_confirmation: "foobar",hasInstitution: "hospital1", isFirstLogin:false)
+				 password: "foobar", password_confirmation: "foobar",isFirstLogin:false)
 	subject {@user}
 	it { should respond_to(:name)}
 	it { should respond_to(:email)}
 	it { should respond_to(:password_digest)}
 	it {should respond_to(:password)}
-	it {should respond_to(:hasInstitution)}
 	it {should respond_to(:isFirstLogin)}
 	it { should respond_to(:password_confirmation)}
 	it { should respond_to(:remember_token)}
@@ -28,13 +27,7 @@ describe User do
 	describe "when name is to long" do
 		before { @user.name = "a" *51}
 		it {should_not be_valid}
-		
-	end
-	describe "when institution is not present" do
-		before { @user.hasInstitution = " "}
-		it {should_not be_valid}
-		
-	end
+
 	describe "when isFirstLogin is not present" do
 		before { @user.isFirstLogin = " "}
 		it {should_not be_valid}

@@ -1,35 +1,10 @@
 require 'spec_helper'
 
 describe Doctor do
-	before { @doctor = Doctor.new(index:1, hasManyPools = "pools", hasManyPatients = "patients", hasManyAppointements="app",doctor.new(name: "Example doctor", email: "doctor@example.com", 
-				 password: "foobar", password_confirmation: "foobar",hasInstitution: "hospital1", isFirstLogin:false)}
+	before { @doctor = Doctor.new(name: "Example doctor", email: "doctor@example.com", 
+				 password: "foobar", password_confirmation: "foobar",isFirstLogin:false)}
 	subject{ doctor}
 #test attributes specific to doctor
-	it { should respond_to(:index)}
-	it { should respond_to(:hasManyAppointements)}
-	it { should respond_to(:hasManyPatients)}
-	it { should respond_to(:hasManyPools)}
-	
-	describe "when index is not present" do
-		before { @doctor.index = " "}
-		it {should_not be_valid}
-
-	end
-	describe "when hasManyAppointements is not present" do
-		before { @doctor.hasManyAppointements= " " }
-		it {should_not be_valid}
-
-	end
-	describe "when hasManyPatients is not present" do
-		before { @doctor.hasManyPatients= " " }
-		it {should_not be_valid}
-
-	end
-	describe "when hasManyPools is not present" do
-		before { @doctor.hasManyPools= " " }
-		it {should_not be_valid}
-
-	end
 	
 #test polymorphic attributes
 	it { should respond_to(:name)}

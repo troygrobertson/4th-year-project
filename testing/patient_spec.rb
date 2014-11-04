@@ -1,41 +1,16 @@
 require 'spec_helper'
 
 describe Patient do
-	before { @patient = Patient.new(index:1, hasOnePool = "pool1", hasOneDoctor = "doctor1", hasManyAppointements ="appointments", patient.new(name: "Example patient", email: "patient@example.com", 
-				 password: "foobar", password_confirmation: "foobar",hasInstitution: "hospital1", isFirstLogin:false)}
+	before { @patient = Patient.new(name: "Example patient", email: "patient@example.com", 
+				 password: "foobar", password_confirmation: "foobar",isFirstLogin:false)}
 	subject{ patient}
 #testing variables specific to patient
-	it { should respond_to(:index)}
-	it { should respond_to(:hasManyAppointements)}
-	it { should respond_to(:hasOneDoctor)}
-	it { should respond_to(:hasOnePool)}
 	
-	describe "when index is not present" do
-		before { @patient.index = " "}
-		it {should_not be_valid}
-
-	end
-	describe "when hasManyAppointements is not present" do
-		before { @patient.hasManyAppointements= " " }
-		it {should_not be_valid}
-
-	end
-	describe "when hasOneDoctor is not present" do
-		before { @patient.hasOneDoctor= " " }
-		it {should_not be_valid}
-
-	end
-	describe "when hasOnePool is not present" do
-		before { @patient.hasOnePool= " " }
-		it {should_not be_valid}
-
-	end
 #check polymorphic elements of the object
 	it { should respond_to(:name)}
 	it { should respond_to(:email)}
 	it { should respond_to(:password_digest)}
 	it {should respond_to(:password)}
-	it {should respond_to(:hasInstitution)}
 	it {should respond_to(:isFirstLogin)}
 	it { should respond_to(:password_confirmation)}
 	it { should respond_to(:remember_token)}
@@ -57,11 +32,7 @@ describe Patient do
 		it {should_not be_valid}
 		
 	end
-	describe "when institution is not present" do
-		before { @patient.hasInstitution = " "}
-		it {should_not be_valid}
-		
-	end
+
 	describe "when isFirstLogin is not present" do
 		before { @patient.isFirstLogin = " "}
 		it {should_not be_valid}
