@@ -1,5 +1,6 @@
 <!doctype html>
 <html>
+<!--<h3> tag denotes that the text there should be a button -->
 <head>
 <meta charset="utf-8">
 <title>Admin Page</title>
@@ -25,19 +26,19 @@
         <table width="300" border="1">
           <tbody>
             <tr>
-              <td><h4>Add User</h4></td>
-              <td><h4>Remove User</h4></td>
-              <td><h4>Edit User</h4></td>
+              <td><h3>Add User</h3></td>
+              <td><h3>Remove User</h3></td>
+              <td><h3>Edit User</h3></td>
             </tr>
             <tr>
-              <td><h4>Add Pool</h4></td>
-              <td><h4>Remove Pool</h4></td>
-              <td><h4>Edit Pool</h4></td>
+              <td><h3>Add Pool</h3></td>
+              <td><h3>Remove Pool</h3></td>
+              <td><h3>Edit Pool</h3></td>
             </tr>
           </tbody>
         </table>
         <br>
-        <h4>Send Admin Message</h4>
+        <h3>Send Admin Message</h3>
         <br>
         <div id="Tabs">
             <ul>
@@ -61,24 +62,75 @@
                     </div>
                     
                     <div id="eButton">
+                    <!--This is a button-->
                         <h6>Edit</h6>
                     </div>
                 </div>
             
                 <div id="Patients" > 
                 	<h4>Patient List</h4>
-                <!--List of Patients goes here-->
-                    
+                <!--List of Patients goes here in the tabulated format-->
+                <table width="300" border="1">
+                  <tbody>
+                    <tr>
+                      <td><h4>Name</h4></td>
+                      <td><h4>Diagnosis</h4></td>
+                      <td><h4>Assigned Doctor</h4></td>
+                    </tr>
+                    <tr>
+                      <td>Patient 1</td>
+                      <td>Diagnosis</td>
+                      <td>Doctor</td>
+                    </tr>
+                    <tr>
+                      <td>Unassigned Patient</td>
+                      <td>Diagnosis</td>
+                      <td><h3>Assign to Doctor</h3></td>
+                    </tr>
+                    <tr>
+                      <td>Patient 3</td>
+                      <td>Diagnosis</td>
+                      <td>Doctor</td>
+                    </tr>
+                  </tbody>
+                </table>
+  
                 </div>
             
                 <div id="Doctors" >  
                 	<h4>Doctor List</h4>
-                <!--List of Doctors goes here-->               
+                <!--List of Doctors goes here follow the table's format-->    
+                	<table width="300" border="1">
+                      <tbody>
+                        <tr>
+                          <td><h4>Name</h4></td>
+                          <td><h4>Specilizaton</h4></td>
+                          <td><h4>Num of Patients</h4></td>
+                        </tr>
+                        <tr>
+                          <td>Doctor 1</td>
+                          <td>Specilzation</td>
+                          <td>#of Patients</td>
+                        </tr>
+                        <tr>
+                          <td>Doctor 2</td>
+                          <td>Specilzation</td>
+                          <td>#of Patients</td>
+                        </tr>
+                        <tr>
+                          <td>Doctor 3</td>
+                          <td>Specilzation</td>
+                          <td>#of Patients</td>
+                        </tr>
+                      </tbody>
+                    </table>
+           
                       
                 </div>
             
                 <div id="Pools" >                 
                     <h4> Pools In Clinic</h4>
+                    <!-- List of all Pools in Clinic goes here, follow the below format-->
                     <table width="400" border="5">
                       <tbody>
                         <tr>
