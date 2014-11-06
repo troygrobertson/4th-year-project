@@ -1,0 +1,151 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Patient Page</title>
+<link href="PatientPage.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <h1>Patient Page</h1>
+    <div id="header">
+        <table width="350" border="1">
+          <tbody>
+            <tr>
+              <td><img src="Zack.png" width="100" height="100" alt=""/></td>
+              <td><h2>Patient's Name</h2></td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+    <br>
+    
+    <div id="Tabs">
+        <ul>
+        <li id="li_Profile" onclick="tab('Profile')" ><a>Profile</a></li>
+        <li id="li_Appointments" onclick="tab('Appointments')"><a>Appointments</a></li>
+        <li id="li_Activities" onclick="tab('Activities')"><a>Activities</a></li>
+        </ul>
+        <div id="Content_Area">
+            <div id="Profile">
+                <div id="name">
+                	<h4>Name:</h4> Patient's Name
+                </div>
+                
+                <div id="age">
+                	<h4>Age:</h4> Patient's Age
+                </div>
+                
+                <div id="sex">
+                	<h4>Sex:</h4> Patient's Sex
+                </div>
+                
+                <div id="diagnosis">
+                	<h4>Diagnosis:</h4> Patient's Diagnosis
+                </div>
+                
+                <div id="other">
+                    <h4>Other Info: </h4>
+                    <p>Other information about the patient.</p>
+                </div>
+                
+                <div id="eButton">
+                	<h6>Edit</h6>
+                </div>
+            </div>
+            
+            <div id="Appointments" > 
+                <div id="makeApp">
+                	<h3>Make appointment</h3>
+                </div>
+                
+                <div id="msgLog">
+                	<h3>Message Log</h3>
+                </div>
+                
+                <div>
+                	<h4>Next appoinment:</h4> Date
+                </div>
+                
+                <div>
+                    <h4>Last Appointment:</h4> Date
+                    <br>
+                    <h4>Last Appointment Log:</h4>
+                    <!--text box with log-->
+                </div>
+            </div>
+            
+            <div id="Activities" > 
+                <div id="toDo">
+                    <h4>Activities To Do</h4>
+                    <table width="500" border="1">
+                      <tbody>
+                        <tr>
+                          <td><h4>Name</h4></td>
+                          <td><h4>Date Assigned</h4></td>
+                          <td><h4>Description</h4></td>
+                        </tr>
+                        <tr>
+                          <td>Last Activity</td>
+                          <td>Last Assigned</td>
+                          <td>Activity Description</td>
+                        </tr>
+                        <tr>
+                          <td>First Activity</td>
+                          <td>First Assigned</td>
+                          <td>Activity Description</td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                </div>
+                
+                <br>
+                
+                <div id="done">
+                    <h4>Comptelted Activities</h4>
+                    <table width="500" border="1">
+                      <tbody>
+                        <tr>
+                          <td><h4>Name</h4></td>
+                          <td><h4>Date Assigned</h4></td>
+                          <td><h4>Date Completed</h4></td>
+                          <td><h4>Description</h4></td>
+                        </tr>
+                        <tr>
+                          <td>Last Activity</td>
+                          <td>Date Assigned</td>
+                          <td>Last Completed Date</td>
+                          <td>Description</td>
+                        </tr>
+                        <tr>
+                          <td>First Activity</td>
+                          <td>Date Assigned</td>
+                          <td>First Completed Date</td>
+                          <td>Description</td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                </div>
+            </div>
+            
+        </div> <!--End of Content_Area Div -->
+    </div> <!--End of Tabs Div -->
+
+</body>
+</html>
+
+<script type="text/javascript">
+	function tab(tab) {
+	document.getElementById('Profile').style.display = 'none';
+	document.getElementById('Appointments').style.display = 'none';
+	document.getElementById('Activities').style.display = 'none';
+	document.getElementById('Appointments').style.display = 'none';
+	document.getElementById('li_Profile').setAttribute("class", "");
+	document.getElementById('li_Appointments').setAttribute("class", "");
+	document.getElementById('li_Activities').setAttribute("class", "");
+	document.getElementById(tab).style.display = 'block';
+	document.getElementById('li_'+tab).setAttribute("class", "active");
+	}
+</script>
