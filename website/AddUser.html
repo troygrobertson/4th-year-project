@@ -3,35 +3,94 @@
 <head>
 <meta charset="utf-8">
 <title>Add User</title>
+<link href="PatientPage.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
-Add User
+<h1>Add User</h1>
+<!-- Tabs for each type of user-->
 
-Type:
-
-<!-- Tabs for each type-->
-
-Admin
-	Name
-    Age
-    Sex
-
-Doctor
-	Name
-    Age
-    Sex
-    Specilizaton
-    Pools
-    Bio/Background
-
-Patient
-	Name
-    Age
-    Sex
-    Diagnosis
-    Pool
-    Other Info
-
+<div id="Tabs">
+	<ul>
+    	<li id="li_Admin" onclick="tab('Admin')" ><a>Admin</a></li>
+        <li id="li_Doctor" onclick="tab('Doctor')"><a>Doctor</a></li>
+        <li id="li_Patient" onclick="tab('Patient')"><a>Patient</a></li>
+    </ul>
+    <div id="Content_Area">
+        <div id="Admin">
+        	<div id="aName">
+            	Admin Name: <input type="text" name="Aname"><br>
+			</div>
+            <div id="aAge">
+            	Admin Age: <input type="text" name="Aage"><br>
+			</div>
+			<div id="aSex">
+				Admin Sex: <input type="text" name="Asex"><br>
+			</div>
+            <input type="submit" value="Submit">
+		</div>
+            
+		<div id="Doctor" > 
+            <div id="dName">
+            	Doctor Name: <input type="text" name="DName"><br>
+            </div>
+            <div id="dAge">
+            	Doctor Age: <input type="text" name="DAge"><br>
+            </div>           
+            <div id="dSex">
+            	Doctor Sex: <input type="text" name="DSex"><br>
+            </div>           
+            <div id="dSpecilizaton">
+            	Doctor Specilizaton: <input type="text" name="DSpecilizaton"><br>
+            </div>           
+            <div id="dPools">
+            	Doctor Pools: <input type="text" name="DPools"><br>
+            </div>           
+            <div id="Bio/Background">
+            	Doctor Bio/Background: <input type="text" name="Bio"><br>
+            </div>  
+            <input type="submit" value="Submit">
+                            	
+        </div>
+            
+        <div id="Patient" >
+            <div id="pName">
+            	Patient Name: <input type="text" name="PName"><br>
+            </div>
+            <div id="pAge">
+            	Patient Age: <input type="text" name="PAge"><br>
+            </div>
+            <div id="pSex">
+            	Patient Sex: <input type="text" name="PSex"><br>
+            </div>
+            <div id="pDiagnosis">
+            	Patient Diagnosis: <input type="text" name="PDiagnosis"><br>
+            </div>
+            <div id="pPool">
+            	Patient Pool: <input type="text" name="PPool"><br>
+            </div>
+            <div id="Other Info">
+            	Patient Other Info: <input type="text" name="Other"><br>
+            </div>
+            <input type="submit" value="Submit">
+            
+        </div>
+        
+	</div> <!--End of Content_Area Div -->
+</div> <!--End of Tabs Div -->
 </body>
 </html>
+
+<script type="text/javascript">
+	function tab(tab) {
+	document.getElementById('Admin').style.display = 'none';
+	document.getElementById('Doctor').style.display = 'none';
+	document.getElementById('Patient').style.display = 'none';
+	document.getElementById('li_Admin').setAttribute("class", "");
+	document.getElementById('li_Doctor').setAttribute("class", "");
+	document.getElementById('li_Patient').setAttribute("class", "");
+	document.getElementById(tab).style.display = 'block';
+	document.getElementById('li_'+tab).setAttribute("class", "active");
+	}
+</script>
+
