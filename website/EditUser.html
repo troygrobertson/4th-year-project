@@ -1,37 +1,39 @@
 <!doctype html>
 <html>
+<!--<h3> tags are still buttons, and the Edit buttons are should redirect to the same interface that allows individual users to edit their individual profiles -->
 <head>
 <meta charset="utf-8">
 <title>Edit User</title>
+<link href="PatientPage.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
 Edit User
 
-Type:
-
-<!-- Tabs for each type-->
-
-Admin
-	Name
-    Age
-    Sex
-
-Doctor
-	Name
-    Age
-    Sex
-    Specilizaton
-    Pools
-    Bio/Background
-
-Patient
-	Name
-    Age
-    Sex
-    Diagnosis
-    Pool
-    Other Info
+<table width="300" border="1">
+  <tbody>
+    <tr>
+      <td><h4>Name</h4></td>
+      <td><h4>User Type</h4></td>
+      <td><h4>Edit</h4></td>
+    </tr>
+    <tr>
+      <td>Dr. Joe</td>
+      <td>Doctor</td>
+      <td><h3>Edit</h3></td>
+    </tr>
+    <tr>
+      <td>Nick</td>
+      <td>Admin</td>
+      <td><h3>Edit</h3></td>
+    </tr>
+    <tr>
+      <td>Mr. Greg</td>
+      <td>Patient</td>
+      <td><h3>Edit</h3></td>
+    </tr>
+  </tbody>
+</table>
 
 </body>
 </html>
